@@ -36,7 +36,7 @@
 $props=$component($props,'urlManager',			'',false,array(
 		'urlSuffix'=>'',
 		'urlFormat'=>'path',
-		'caseSensitive'=>false,
+		'caseSensitive'=>true,
 		'showScriptName'=>false,
 		'rules'=>array(
         // REST patterns
@@ -46,5 +46,5 @@ $props=$component($props,'urlManager',			'',false,array(
         array('api/delete',	'pattern'=>'api/<model:\w+>/<id:\d+>', 'verb'=>'DELETE'),
         array('api/create',	'pattern'=>'api/<model:\w+>', 'verb'=>'POST'),
         // Other controllers
-        '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+        '<model:\w+>/<controller:\w+>/<action:\w+>'=>'<model>/<controller>/<action>',
 		),));

@@ -60,11 +60,11 @@ $subms=$module($subms,'user','rbac',array(
 
 		// Password Requirements see components/CPasswordValidator.php
 		'passwordRequirements' => array(
-				'minLen' => 8,
+				'minLen' => 6,
 				'maxLen' => 32,
-				'minLowerCase' => 1,
+				'minLowerCase' => 0,
 				'minUpperCase'=>0,
-				'minDigits' => 1,
+				'minDigits' => 0,
 				'maxRepetition' => 3,),
 
 		// let users be able to register to your Application without Registration
@@ -172,16 +172,16 @@ $props=$component($props,'user','application.modules.rbac.modules.user.component
 /**
  * Yii URLs Manager
  */
-$props=$component($props,'urlManager',			'',false,array(
-		'urlSuffix'=>'',
-		'urlFormat'=>'path',
-		'rules'=>array(
-		// REST patterns
-		array('//rbac/user/rest/list', 'pattern' => 'rest/<mode:\w+>', 'verb' => 'GET'),
-		array('//rbac/user/rest/view', 'pattern' => 'rest/<mode:\w+>/<id:\d+>', 'verb' => 'GET'), 
-		array('//rbac/user/rest/create', 'pattern'=>'rest/create/<mode:\w+>', 'verb'=>'POST'),
-		array('//rbac/user/rest/update', 'pattern'=>'rest/update/<mode:\w+>/<id:\d+>', 'verb'=>'PUT'),
-		),));
+// $props=$component($props,'urlManager',			'',false,array(
+// 		'urlSuffix'=>'',
+// 		'urlFormat'=>'path',
+// 		'rules'=>array(
+// 		// REST patterns
+// 		array('//rbac/user/rest/list', 'pattern' => 'rest/<mode:\w+>', 'verb' => 'GET'),
+// 		array('//rbac/user/rest/view', 'pattern' => 'rest/<mode:\w+>/<id:\d+>', 'verb' => 'GET'), 
+// 		array('//rbac/user/rest/create', 'pattern'=>'rest/create/<mode:\w+>', 'verb'=>'POST'),
+// 		array('//rbac/user/rest/update', 'pattern'=>'rest/update/<mode:\w+>/<id:\d+>', 'verb'=>'PUT'),
+// 		),));
 
 /**
  * parameters & configurations

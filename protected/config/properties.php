@@ -90,19 +90,19 @@ $props=$import($props,'application.models.*');
 $props=$import($props,'application.components.*');
 
 //enable customer extends
-//include_once(dirname(__FILE__)."/fork/import.php");
+include_once(dirname(__FILE__)."/fork/import.php");
 
 /**
  * Yii URLs
  */
 //	enable URLs Manager
-//include_once(dirname(__FILE__)."/fork/url.php");
+include_once(dirname(__FILE__)."/fork/url.php");
 
 /**
  * Yii database
  */
 //	enable Yii database
-//include_once(dirname(__FILE__)."/fork/db.php");
+include_once(dirname(__FILE__)."/fork/db.php");
 
 /**
  * preload default will call CApplicationComponent.init()
@@ -195,6 +195,7 @@ include_once(dirname(__FILE__)."/extension/piwik.php");
 		// where default js replace
 // $props['params']['js']='js/';
 		
-//xxx($props);
+// xxx($props['modules']);
+// xxx($props['components']);
 
 return ($props);
